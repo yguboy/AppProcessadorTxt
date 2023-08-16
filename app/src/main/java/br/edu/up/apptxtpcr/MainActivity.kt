@@ -47,22 +47,29 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         var a = txt01.text.toString()
         var b = txt02.text.toString()
 
-        var texto = ""
-        //for(contador in 1..a.toInt()){
+        //var texto = ""
+        for(contador in 1..a.toInt()){
             //texto += contador.toString() + "\n"
             //texto += "Número: " + contador.toString() + "\n"
             //texto += "Número: $contador \n"
         }
 
-        var texto = ""
-        if (a.toInt() < 10){
-            texto = "Valor de A é menor que 10!"
-        } else {
-            texto = "Valor de A é maior que 10!"
-        }
+        //var texto = ""
+        //if (a.toInt() < 10){
+        //    texto = "Valor de A é menor que 10!"
+        //} else {
+        //    texto = "Valor de A é maior que 10!"
+        //}
 
         //var resultado: Int = somar(a.toInt(), b.toInt())
 
+    val litaDeFrutas = mutableListOf("Laranja", "Maça", "Pêssego")
+        listaDeFrutas[10] = "Mexirica"
+        listaDeFrutas.removeAt(2)
+        var texto = ""
+        for(fruta in listaDeFrutas){
+            texto += fruta + "\n"
+        }
         txtConsole.text = texto //resultado.toString() //textoCompleto
     }
 }
