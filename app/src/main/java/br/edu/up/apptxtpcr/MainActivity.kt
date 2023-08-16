@@ -48,11 +48,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         var b = txt02.text.toString()
 
         //var texto = ""
-        for(contador in 1..a.toInt()){
+       //for(contador in 1..a.toInt()){
             //texto += contador.toString() + "\n"
             //texto += "Número: " + contador.toString() + "\n"
             //texto += "Número: $contador \n"
-        }
+       //}
 
         //var texto = ""
         //if (a.toInt() < 10){
@@ -63,13 +63,34 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         //var resultado: Int = somar(a.toInt(), b.toInt())
 
-    val litaDeFrutas = mutableListOf("Laranja", "Maça", "Pêssego")
-        listaDeFrutas[10] = "Mexirica"
-        listaDeFrutas.removeAt(2)
-        var texto = ""
-        for(fruta in listaDeFrutas){
-            texto += fruta + "\n"
-        }
-        txtConsole.text = texto //resultado.toString() //textoCompleto
+        //    val litaDeFrutas = mutableListOf("Laranja", "Maçã", "Pêssego")
+        //        listaDeFrutas[10] = "Mexirica"
+        //        listaDeFrutas.removeAt(2)
+        //        var texto = ""
+        //        for(fruta in listaDeFrutas){
+        //            texto += fruta + "\n"
+        //        }
+
+
+
+        val lista = criarListaDeTexto(a.toInt(), b)
+        var texto = converterParaTextoConsole(lista)
+        txtConsole.text = texto //resultado.toString() textoCompleto
     }
-}
+
+    fun converterParaTextoConsole(lista: MutableList<String>): String{
+        var texto = ""
+        for(item: in lista){
+            texto += item + "\n"
+        }
+        return texto
+    }
+
+        fun criarListaDeTexto(total: Int, texto: String): MutableList<String> {
+            var lista = mutableListOf<String>()
+            for(contador in 1..total){
+                lista.add("$texto $contador")
+            }
+            return lista
+        }
+    }
