@@ -26,8 +26,43 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnProcessar.setOnClickListener(this)
     }
 
+    fun subtrair(a: Int, b: Int): Int{
+        return a - b
+    }
+
+    fun somar(a: Int, b: Int): Int{
+        return a + b
+    }
+
+    fun dividir(a: Int, b: Int): Int{
+        return a / b
+    }
+
+    fun multiplicar(a: Int, b: Int): Int{
+        return a * b
+    }
+
     override fun onClick(p0: View?) {
-        var textoCompleto = txt01.text.toString() + txt02.text.toString()
-        txtConsole.text = textoCompleto
+        //var textoCompleto = txt01.text.toString() + txt02.text.toString()
+        var a = txt01.text.toString()
+        var b = txt02.text.toString()
+
+        var texto = ""
+        //for(contador in 1..a.toInt()){
+            //texto += contador.toString() + "\n"
+            //texto += "Número: " + contador.toString() + "\n"
+            //texto += "Número: $contador \n"
+        }
+
+        var texto = ""
+        if (a.toInt() < 10){
+            texto = "Valor de A é menor que 10!"
+        } else {
+            texto = "Valor de A é maior que 10!"
+        }
+
+        //var resultado: Int = somar(a.toInt(), b.toInt())
+
+        txtConsole.text = texto //resultado.toString() //textoCompleto
     }
 }
